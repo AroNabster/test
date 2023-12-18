@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                echo "${env.gitBranch}".substring(branch.indexOf('/')+1).replace("/", "_")
+                echo "${env.gitBranch}".substring(env.gitBranch.indexOf('/')+1).replace("/", "_")
             }
         }
     }
